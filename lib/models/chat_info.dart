@@ -1,5 +1,4 @@
 import 'package:uuid/uuid.dart';
-
 import 'message.dart';
 
 class ChatInfo {

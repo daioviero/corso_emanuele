@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-
-import '../../data/models/chat_info.dart';
+import '../../../models/chat_info.dart';
 
 class ChatPreviewTile extends StatelessWidget {
   const ChatPreviewTile({

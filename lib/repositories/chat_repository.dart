@@ -2,7 +2,6 @@ import '../models/chat_info.dart';
 import '../models/message.dart';
 
 class ChatRepository {
-
   final List<ChatInfo> _list = [
     ChatInfo(
       image: "assets/images/dado1.png",
@@ -57,6 +56,6 @@ class ChatRepository {
 
   Future<ChatInfo> getChatMessages(String id) async {
     await Future.delayed(Duration(seconds: 1));
-    return _list.firstWhere((e) => e.id==id);
+    return _list.firstWhere((e) => e.id == id);
   }
 }

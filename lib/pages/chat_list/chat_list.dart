@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../data/repositories/chat_repository.dart';
-import '../../widgets/chat_list_content.dart';
+import '../../repositories/chat_repository.dart';
+import 'widgets/chat_list_content.dart';
 import 'bloc/chat_list_bloc.dart';
 
 class ChatList extends StatelessWidget {

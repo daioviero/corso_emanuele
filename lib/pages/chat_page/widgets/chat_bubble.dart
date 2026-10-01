@@ -6,7 +6,7 @@ class ChatBubble extends StatelessWidget {
     super.key,
     required this.message,
     required this.orario,
-    required this. isMine,
+    required this.isMine,
   });
 
   final String? message;
@@ -16,7 +16,9 @@ class ChatBubble extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Color bubbleColor = isMine ? Color(0xFF1B5E20) : Colors.grey[850]!;
-    Alignment blubbleAlignment = isMine ? Alignment.centerRight : Alignment.centerLeft;
+    Alignment blubbleAlignment = isMine
+        ? Alignment.centerRight
+        : Alignment.centerLeft;
     return Align(
       alignment: blubbleAlignment,
       child: Container(
@@ -28,17 +30,14 @@ class ChatBubble extends StatelessWidget {
           padding: const EdgeInsets.only(left: 10, right: 10),
           child: SizedBox(
             // Così mi muovo in base alla dimensione della finestra
-            width: MediaQuery.of(context).size.width/2,
+            width: MediaQuery.of(context).size.width / 2,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
                   '$message',
-                  style: GoogleFonts.roboto(
-                    color: Colors.white,
-                    fontSize: 15,
-                  ),
+                  style: GoogleFonts.roboto(color: Colors.white, fontSize: 15),
                 ),
                 Align(
                   alignment: Alignment.bottomRight,

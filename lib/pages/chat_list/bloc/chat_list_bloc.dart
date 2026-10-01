@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../data/models/chat_info.dart';
-import '../../../../data/repositories/chat_repository.dart';
+import '../../../models/chat_info.dart';
+import '../../../repositories/chat_repository.dart';
 
 part 'chat_list_event.dart';
 part 'chat_list_state.dart';

@@ -2,14 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
-import '../../../data/repositories/chat_repository.dart';
-import '../../router/route_names.dart';
-import '../../widgets/chat_bubble.dart';
-import 'bloc/chat_page_bloc.dart';
 
-/* Passare da fuori il nome del contatto
-      e contruire un'altra pagina in cui nell'app bar compare
-   */
+import '../../repositories/chat_repository.dart';
+import '../../router/route_names.dart';
+import 'widgets/chat_bubble.dart';
+import 'bloc/chat_page_bloc.dart';
 
 class ChatPage extends StatelessWidget {
   const ChatPage({super.key, required this.chatId});
@@ -25,8 +22,7 @@ class ChatPage extends StatelessWidget {
       child: BlocConsumer<ChatPageBloc, ChatPageState>(
         listener: (context, state) {},
         builder: (context, state) {
-          if (state is ChatPageLoading)
-            return CircularProgressIndicator();
+          if (state is ChatPageLoading) return CircularProgressIndicator();
           final chat = (state as ChatPageSuccess).chat;
 
           return Scaffold(
@@ -43,7 +39,6 @@ class ChatPage extends StatelessWidget {
               ),
             ),
             body: SizedBox.expand(
-              // Expand() Espande il figlio all'interno del padre per occupare tutto lo spazio possibile (usato spesso)
               child: Container(
                 decoration: BoxDecoration(
                   image: DecorationImage(

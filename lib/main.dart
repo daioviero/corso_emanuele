@@ -1,4 +1,4 @@
-import 'package:corso_emanuele/presentation/router/custom_router.dart';
+import 'package:corso_emanuele/router/custom_router.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const FirstApp());
