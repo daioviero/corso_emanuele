@@ -7,8 +7,6 @@ import 'bloc/chat_list_bloc.dart';
 class ChatList extends StatelessWidget {
   const ChatList({super.key});
 
-  void saluta(String name) => print('Ciao $name');
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,13 +40,13 @@ class ChatList extends StatelessWidget {
           listener: (context, state) {},
           builder: (context, state) {
             if (state is ChatListLoading)
-              return CircularProgressIndicator();
+              return Center(child: CircularProgressIndicator());
             else
               return ChatListContent(chats: (state as ChatListSuccess).chats);
           },
         ),
       ),
-      // Bottono New Chat
+      // Bottone New Chat
       floatingActionButton: FloatingActionButton(
         shape: const CircleBorder(),
         backgroundColor: Colors.green,
